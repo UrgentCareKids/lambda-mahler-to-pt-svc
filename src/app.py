@@ -4,7 +4,7 @@ import boto3
 import os
 
 def handler(event,context):
-    ...
+    call_pt_svc()
 # """     
 # patient creation:
 # will need the mahler id 
@@ -43,4 +43,4 @@ def masterdata_conn():
     return conn
 
 def call_pt_svc():
-    ...
+    print('hello from api gateway')
