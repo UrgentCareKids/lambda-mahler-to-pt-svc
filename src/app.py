@@ -48,7 +48,7 @@ def masterdata_conn():
 def call_pt_svc(payload):
     _targetconnection = masterdata_conn()
     cursor = _targetconnection.cursor()
-    proc_call = "call public.mstr_intake_mahler(%s)"
+    proc_call = "call public.mstr_intake_mahler(0,%s)"
     cursor.execute(proc_call, (json.dumps(payload),))
     _targetconnection.commit()
     print(payload)
